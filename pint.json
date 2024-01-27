@@ -1,0 +1,15 @@
+{
+  "preset": "psr12",
+  "exclude": [
+    "app/etc",
+    "bin",
+    "dev",
+    "generated",
+    "lib",
+    "phpserver",
+    "pub",
+    "setup",
+    "var",
+    "composer.json"
+  ]
+}
