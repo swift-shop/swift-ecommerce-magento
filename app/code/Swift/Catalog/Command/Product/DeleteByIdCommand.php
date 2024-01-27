@@ -40,8 +40,7 @@ class DeleteByIdCommand
         LoggerInterface     $logger,
         ProductModelFactory $modelFactory,
         ProductResource     $resource
-    )
-    {
+    ) {
         $this->logger = $logger;
         $this->modelFactory = $modelFactory;
         $this->resource = $resource;
@@ -64,7 +63,8 @@ class DeleteByIdCommand
 
             if (!$model->getData(ProductInterface::PRODUCT_ID)) {
                 throw new NoSuchEntityException(
-                    __('Could not find Product with id: `%id`',
+                    __(
+                        'Could not find Product with id: `%id`',
                         [
                             'id' => $entityId
                         ]

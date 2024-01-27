@@ -54,8 +54,7 @@ class GetListQuery
         ProductDataMapper             $entityDataMapper,
         SearchCriteriaBuilder         $searchCriteriaBuilder,
         SearchResultsInterfaceFactory $searchResultFactory
-    )
-    {
+    ) {
         $this->collectionProcessor = $collectionProcessor;
         $this->entityCollectionFactory = $entityCollectionFactory;
         $this->entityDataMapper = $entityDataMapper;

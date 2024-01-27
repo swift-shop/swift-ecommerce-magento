@@ -23,8 +23,7 @@ class ProductDataMapper
      */
     public function __construct(
         ProductInterfaceFactory $entityDtoFactory
-    )
-    {
+    ) {
         $this->entityDtoFactory = $entityDtoFactory;
     }
 

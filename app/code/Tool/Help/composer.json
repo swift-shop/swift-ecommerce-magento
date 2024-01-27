@@ -1,13 +1,10 @@
 {
-  "name": "tool/module-template",
+  "name": "tool/module-help",
   "version": "1.0.0",
   "description": "N/A",
   "type": "magento2-module",
   "require": {
     "magento/framework": "*"
-  },
-  "require-dev": {
-    "roave/security-advisories": "dev-latest"
   },
   "license": [
     "Proprietary"
@@ -17,7 +14,7 @@
       "registration.php"
     ],
     "psr-4": {
-      "Tool\\Template\\": ""
+      "Tool\\Help\\": ""
     }
   }
 }

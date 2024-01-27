@@ -7,9 +7,11 @@
  */
 
 use Magento\Framework\App\Bootstrap;
+use Core\Middleware\Library\CacheLibrary;
 
 try {
-    require __DIR__ . '/../app/bootstrap.php';
+    require_once __DIR__ . '/../app/bootstrap.php';
+    require_once __DIR__ . '/../app/code/Core/Middleware/Library/CacheLibrary.php';
 } catch (\Exception $e) {
     echo <<<HTML
 <div style="font:12px/1.35em arial, helvetica, sans-serif;">
@@ -23,8 +25,21 @@ HTML;
     http_response_code(500);
     exit(1);
 }
+try {
+    $cacheMiddleware = CacheLibrary::create();
+    $cacheData = $cacheMiddleware->loadCache();
+} catch (\Exception $e) {
+    $cacheData = null;
+}
+if (!empty($cacheData)) {
+    if (!headers_sent()) {
+        header("content-type:application/json; charset=utf-8");
+    }
+    echo $cacheData;
+} else {
+    $bootstrap = Bootstrap::create(BP, $_SERVER);
+    /** @var \Magento\Framework\App\Http $app */
+    $app = $bootstrap->createApplication(\Magento\Framework\App\Http::class);
+    $bootstrap->run($app);
+}
 
-$bootstrap = Bootstrap::create(BP, $_SERVER);
-/** @var \Magento\Framework\App\Http $app */
-$app = $bootstrap->createApplication(\Magento\Framework\App\Http::class);
-$bootstrap->run($app);

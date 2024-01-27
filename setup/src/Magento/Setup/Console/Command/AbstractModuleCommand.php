@@ -80,7 +80,7 @@ abstract class AbstractModuleCommand extends AbstractSetupCommand
         /** @var \Magento\Framework\App\Cache $cache */
         $cache = $this->objectManager->get(\Magento\Framework\App\Cache::class);
         $cache->clean();
-        $output->writeln('<info>Cache cleared successfully.</info>');
+        $output->writeln('<info>CacheMiddleware cleared successfully.</info>');
         /** @var \Magento\Framework\App\State\CleanupFiles $cleanupFiles */
         $cleanupFiles = $this->objectManager->get(\Magento\Framework\App\State\CleanupFiles::class);
         $cleanupFiles->clearCodeGeneratedClasses();
