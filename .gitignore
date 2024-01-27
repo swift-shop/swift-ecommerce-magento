@@ -42,4 +42,6 @@
 !/var/package
 /var/package/*
 !/var/package/*.xml
-
+vendor/
+.idea/
+.vscode/
