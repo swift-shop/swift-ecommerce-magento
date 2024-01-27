@@ -42,6 +42,9 @@
 !/var/package
 /var/package/*
 !/var/package/*.xml
-vendor/
+
+/vendor/*
+!/vendor/.htaccess
+
 .idea/
 .vscode/
