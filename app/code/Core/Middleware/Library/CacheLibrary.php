@@ -44,7 +44,7 @@ final class CacheLibrary
     {
         if ($this->cacheAble()) {
             $cacheData = $this->getParam('refresh') ? false : $this->redisConn()->get($this->getCacheKey());
-            return $this->_decodeData($cacheData);
+            return $this->decodeData($cacheData);
         }
         return null;
     }
@@ -59,9 +59,10 @@ final class CacheLibrary
     }
 
     /**
+     * @return mixed
      * @throws \JsonException
      */
-    private function getParams()
+    private function getParams(): mixed
     {
         $params = file_get_contents("php://input");
         return json_decode($params, true, 512, JSON_THROW_ON_ERROR);
@@ -84,7 +85,7 @@ final class CacheLibrary
         return self::CACHE_PREFIX . md5($requireUrl . $cacheVersion . json_encode($params));
     }
 
-    public function cacheAble($uri = '')
+    public function cacheAble($uri = ''): bool
     {
         $uri = $this->getRequestUri($uri);
         if (in_array($uri, $this->cacheUrls)) {
@@ -104,7 +105,7 @@ final class CacheLibrary
         if (str_contains($uri, '?')) {
             $uri = substr($uri, 0, strpos($uri, '?'));
         }
-        if (substr($uri, -1) == '/') {
+        if (str_ends_with($uri, '/')) {
             $uri = substr($uri, 0, -1);
         }
         $uri = substr($uri, strpos($uri, '/mp'));
@@ -143,10 +144,12 @@ final class CacheLibrary
         return $this->isAllowMethod;
     }
 
-
-    protected function _decodeData($data)
+    protected function decodeData($data)
     {
         switch (substr($data, 0, 4)) {
+            case ':gz:':
+                $data = gzuncompress(substr($data, 4));
+                break;
             case ':sn:':
                 $data = snappy_uncompress(substr($data, 4));
                 break;
@@ -156,8 +159,7 @@ final class CacheLibrary
             case ':l4:':
                 $data = lz4_uncompress(substr($data, 4));
                 break;
-            case ':gz:':
-                $data = gzuncompress(substr($data, 4));
+            default:
                 break;
         }
         return $data;
@@ -187,7 +189,7 @@ final class CacheLibrary
 
     private function getRedisCacheConfig(): array
     {
-        $envData = require __DIR__ . '/../app/etc/env.php';
+        $envData = require __DIR__ . '/../../../../../app/etc/env.php';
         $backendOptions = $envData['cache']['frontend']['default']['backend_options'];
         return [
             'host' => $backendOptions['server'],
