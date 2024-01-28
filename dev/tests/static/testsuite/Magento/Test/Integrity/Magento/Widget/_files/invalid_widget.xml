@@ -55,7 +55,7 @@
             </option>
         </parameter>
         <parameter name="cache_lifetime" type="text" visible="true" translate="label description">
-            <label>CacheMiddleware Lifetime (Seconds)</label>
+            <label>Cache Lifetime (Seconds)</label>
             <description>86400 by default, if not set. To refresh instantly, clear the Blocks HTML Output cache.</description>
         </parameter>
 

@@ -8,8 +8,7 @@ class PlaceholderPresenter
 {
     public function __construct(
         private PlaceholderService $service
-    )
-    {
+    ) {
 
     }
 

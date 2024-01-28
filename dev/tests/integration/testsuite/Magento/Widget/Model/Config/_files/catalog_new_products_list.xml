@@ -63,7 +63,7 @@
                 </options>
             </parameter>
             <parameter name="cache_lifetime" xsi:type="text" visible="true">
-                <label translate="true">CacheMiddleware Lifetime (Seconds)</label>
+                <label translate="true">Cache Lifetime (Seconds)</label>
                 <description translate="true">86400 by default, if not set. To refresh instantly, clear the Blocks HTML
                     Output cache.
                 </description>
