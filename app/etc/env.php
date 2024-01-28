@@ -1,11 +1,27 @@
 <?php
 return [
+    'cache_types' => [
+        'compiled_config' => 1,
+        'config' => 1,
+        'layout' => 1,
+        'block_html' => 1,
+        'collections' => 1,
+        'reflection' => 1,
+        'db_ddl' => 1,
+        'eav' => 1,
+        'customer_notification' => 1,
+        'config_integration' => 1,
+        'config_integration_api' => 1,
+        'full_page' => 1,
+        'config_webservice' => 1,
+        'translate' => 1
+    ],
     'backend' => [
-        'frontName' => 'admin_bu53ub'
+        'frontName' => 'admin_1dxvc2'
     ],
     'cache' => [
         'graphql' => [
-            'id_salt' => 'r2oN1dNFdEtnTY90pAqU14rPG0WW8Uof'
+            'id_salt' => 'a07AAlrT2fV9SUMfcGlhgobICghMBWqI'
         ],
         'frontend' => [
             'default' => [
@@ -33,7 +49,7 @@ return [
         'consumers_wait_for_messages' => 1
     ],
     'crypt' => [
-        'key' => 'efc386d9c8a039cedc3d5471a543c8fa'
+        'key' => '8d752b0595446ffe5eb3ccbf228570de'
     ],
     'db' => [
         'table_prefix' => '',
@@ -93,27 +109,10 @@ return [
     'directories' => [
         'document_root_is_pub' => true
     ],
-    'cache_types' => [
-        'config' => 1,
-        'layout' => 1,
-        'block_html' => 1,
-        'collections' => 1,
-        'reflection' => 1,
-        'db_ddl' => 1,
-        'compiled_config' => 1,
-        'eav' => 1,
-        'customer_notification' => 1,
-        'config_integration' => 1,
-        'config_integration_api' => 1,
-        'full_page' => 1,
-        'config_webservice' => 1,
-        'translate' => 1
-    ],
     'downloadable_domains' => [
-        'localhost',
         'swift.test'
     ],
     'install' => [
-        'date' => 'Sun, 28 Jan 2024 08:30:45 +0000'
+        'date' => 'Sun, 28 Jan 2024 10:30:18 +0000'
     ]
 ];

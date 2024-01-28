@@ -51,3 +51,6 @@
 
 /generated/*
 !/generated/.htaccess
+
+/pub/static/*
+!/pub/static/.htaccess
