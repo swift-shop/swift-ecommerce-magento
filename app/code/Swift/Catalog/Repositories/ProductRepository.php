@@ -11,7 +11,21 @@ declare(strict_types=1);
 namespace Swift\Catalog\Repositories;
 
 use Core\Base\Repositories\Repository;
+use Magento\Catalog\Model\ProductFactory;
 
 class ProductRepository extends Repository
 {
+    public function __construct(
+        private ProductFactory $productFactory
+    )
+    {
+
+    }
+
+    public function getData()
+    {
+        
+    }
+    
+
 }

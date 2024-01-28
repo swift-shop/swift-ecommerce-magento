@@ -7,6 +7,7 @@ use Magento\Framework\Api\SearchCriteriaInterface;
 use Magento\Framework\Api\SearchCriteria\CollectionProcessorInterface;
 use Magento\Framework\Api\SearchResultsInterface;
 use Magento\Framework\Api\SearchResultsInterfaceFactory;
+use Swift\Catalog\Api\GetProductListInterface;
 use Swift\Catalog\Mapper\ProductDataMapper;
 use Swift\Catalog\Model\ResourceModel\ProductModel\ProductCollection;
 use Swift\Catalog\Model\ResourceModel\ProductModel\ProductCollectionFactory;
@@ -14,7 +15,7 @@ use Swift\Catalog\Model\ResourceModel\ProductModel\ProductCollectionFactory;
 /**
  * Get Product list by search criteria query.
  */
-class GetListQuery
+class GetListQuery implements GetProductListInterface
 {
     /**
      * @var CollectionProcessorInterface
@@ -63,11 +64,7 @@ class GetListQuery
     }
 
     /**
-     * Get Product list by search criteria.
-     *
-     * @param SearchCriteriaInterface|null $searchCriteria
-     *
-     * @return SearchResultsInterface
+     * @inheritDoc
      */
     public function execute(?SearchCriteriaInterface $searchCriteria = null): SearchResultsInterface
     {

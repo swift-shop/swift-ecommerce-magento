@@ -2,4 +2,10 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
     <preference for="Swift\Catalog\Api\Data\ProductInterface" type="Swift\Catalog\Model\Data\ProductData"/>
+    <preference for="Swift\Catalog\Api\GetProductListInterface" type="Swift\Catalog\Query\Product\GetListQuery"/>
+    <preference for="Swift\Catalog\Api\SaveProductInterface" type="Swift\Catalog\Command\Product\SaveCommand"/>
+    <preference for="Swift\Catalog\Api\DeleteProductByIdInterface"
+                type="Swift\Catalog\Command\Product\DeleteByIdCommand"/>
+    <preference for="Swift\Catalog\Api\Data\ProductSearchResultsInterface"
+                type="Swift\Catalog\Model\ProductSearchResults"/>
 </config>

@@ -7,6 +7,7 @@ use Magento\Framework\Exception\CouldNotDeleteException;
 use Magento\Framework\Exception\NoSuchEntityException;
 use Psr\Log\LoggerInterface;
 use Swift\Catalog\Api\Data\ProductInterface;
+use Swift\Catalog\Api\DeleteProductByIdInterface;
 use Swift\Catalog\Model\ProductModel;
 use Swift\Catalog\Model\ProductModelFactory;
 use Swift\Catalog\Model\ResourceModel\ProductResource;
@@ -14,7 +15,7 @@ use Swift\Catalog\Model\ResourceModel\ProductResource;
 /**
  * Delete Product by id Command.
  */
-class DeleteByIdCommand
+class DeleteByIdCommand implements DeleteProductByIdInterface
 {
     /**
      * @var LoggerInterface
@@ -47,12 +48,7 @@ class DeleteByIdCommand
     }
 
     /**
-     * Delete Product.
-     *
-     * @param int $entityId
-     *
-     * @return void
-     * @throws CouldNotDeleteException
+     * @inheritDoc
      */
     public function execute(int $entityId): void
     {

@@ -5,6 +5,7 @@
         <resources>
             <resource id="Magento_Backend::admin">
                 <resource id="Swift_Catalog::management" title="Product Management"/>
+                <resource id="Swift_Catalog::management" title="Product Management"/>
             </resource>
         </resources>
     </acl>

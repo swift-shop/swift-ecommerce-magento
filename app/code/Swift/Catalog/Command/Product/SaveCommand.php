@@ -6,6 +6,7 @@ use Exception;
 use Magento\Framework\Exception\CouldNotSaveException;
 use Psr\Log\LoggerInterface;
 use Swift\Catalog\Api\Data\ProductInterface;
+use Swift\Catalog\Api\SaveProductInterface;
 use Swift\Catalog\Model\ProductModel;
 use Swift\Catalog\Model\ProductModelFactory;
 use Swift\Catalog\Model\ResourceModel\ProductResource;
@@ -13,7 +14,7 @@ use Swift\Catalog\Model\ResourceModel\ProductResource;
 /**
  * Save Product Command.
  */
-class SaveCommand
+class SaveCommand implements SaveProductInterface
 {
     /**
      * @var LoggerInterface
@@ -46,12 +47,7 @@ class SaveCommand
     }
 
     /**
-     * Save Product.
-     *
-     * @param ProductInterface $product
-     *
-     * @return int
-     * @throws CouldNotSaveException
+     * @inheritDoc
      */
     public function execute(ProductInterface $product): int
     {
