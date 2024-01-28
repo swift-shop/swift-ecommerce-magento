@@ -48,3 +48,6 @@
 
 .idea/
 .vscode/
+
+/generated/*
+!/generated/.htaccess
