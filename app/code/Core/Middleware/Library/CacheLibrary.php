@@ -187,7 +187,7 @@ final class CacheLibrary
         return $this->redis;
     }
 
-    private function getRedisCacheConfig(): array
+    private function _getRedisCacheConfig(): array
     {
         $envData = require __DIR__ . '/../../../../../app/etc/env.php';
         $backendOptions = $envData['cache']['frontend']['default']['backend_options'];

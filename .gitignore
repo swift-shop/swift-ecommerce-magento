@@ -55,3 +55,4 @@
 /pub/static/*
 /pub/media/theme/preview/*
 !/pub/static/.htaccess
+.php-cs-fixer.cache

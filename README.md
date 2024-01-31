@@ -2,6 +2,9 @@ beautify cody
 run
 ```shell
 ./vendor/bin/pint
+
+# code check
+./vendor/bin/psalm
 ```
 
 init run
