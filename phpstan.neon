@@ -1,0 +1,18 @@
+includes:
+	- phpstan-baseline.neon
+
+parameters:
+    level: 1
+    reportUnmatchedIgnoredErrors: false
+    ignoreErrors:
+# Not applicable on level 1
+#        - '#Call to an undefined method [a-zA-Z0-9\\_]+::(get|set|uns|has|calc|unset)[A-Z]#'
+        - '#Variable \$block might not be defined.#'
+        - '#Undefined variable: \$block#'
+    fileExtensions:
+        - php
+        - phtml
+    excludePaths:
+        - Test/*
+        # These fail on Magento 2.2 and that's expected, these are only applicable on Magento 2.3 and higher.
+        - Service/Order/Uncancel/OrderReservation.php
