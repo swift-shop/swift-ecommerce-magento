@@ -6,6 +6,9 @@
   "require": {
     "magento/framework": "*"
   },
+  "require-dev": {
+    "roave/security-advisories": "dev-latest"
+  },
   "license": [
     "Proprietary"
   ],
