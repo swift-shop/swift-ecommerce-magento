@@ -10,6 +10,13 @@ declare(strict_types=1);
 
 namespace Core\Base\Formatters;
 
-class Formatter
+/**
+ * the type you want to output
+ */
+abstract class Formatter
 {
+    public function formatter(): void
+    {
+
+    }
 }

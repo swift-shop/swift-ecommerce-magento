@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Catalog_Product::management" sortOrder="100" title="Product Management" module="Catalog_Product"
+             parent="Catalog_Product::management" resource="Catalog_Product::management" translate="title"
+             action="product/product/index"/>
+    </menu>
+</config>

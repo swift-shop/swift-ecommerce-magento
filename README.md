@@ -4,7 +4,7 @@ run
 ./vendor/bin/pint
 
 # code check
-./vendor/bin/psalm
+2次
 ```
 
 init run

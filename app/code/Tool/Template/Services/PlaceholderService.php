@@ -11,7 +11,13 @@ declare(strict_types=1);
 namespace Tool\Template\Services;
 
 use Core\Base\Services\Service;
+use Tool\Template\Formatters\PlaceholderFormatter;
 
 class PlaceholderService extends Service
 {
+    public function __construct(
+        PlaceholderFormatter $placeholderFormatter,
+    )
+    {
+    }
 }

@@ -12,6 +12,6 @@ namespace Tool\Template\Formatters;
 
 use Core\Base\Formatters\Formatter;
 
-class PlaceholderFormatter extends Formatter
+abstract class PlaceholderFormatter extends Formatter
 {
 }

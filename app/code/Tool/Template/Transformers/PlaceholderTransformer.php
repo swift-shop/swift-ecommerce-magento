@@ -15,6 +15,6 @@ use Core\Base\Transformers\Transformer;
 /**
  *
  */
-class PlaceholderTransformer extends Transformer
+abstract class PlaceholderTransformer extends Transformer
 {
 }

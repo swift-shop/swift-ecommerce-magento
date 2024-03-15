@@ -10,6 +10,13 @@ declare(strict_types=1);
 
 namespace Core\Base\Services;
 
+use Core\Base\Transformers\ResponseTransformer;
+
 class Service
 {
+    public function __construct(
+        private readonly ResponseTransformer $responseTransformer
+    ) {
+
+    }
 }

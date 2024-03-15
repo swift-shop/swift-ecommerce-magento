@@ -10,6 +10,13 @@ declare(strict_types=1);
 
 namespace Core\Base\Transformers;
 
-class Transformer
+/**
+ * the attr you want to output
+ */
+abstract class Transformer
 {
+    public function transform(): void
+    {
+
+    }
 }

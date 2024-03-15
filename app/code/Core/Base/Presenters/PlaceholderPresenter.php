@@ -4,7 +4,7 @@ namespace Core\Base\Presenters;
 
 use Core\Base\Services\Service;
 
-class PlaceholderPresenter
+class Presenter
 {
     public function __construct(
         private Service $service
