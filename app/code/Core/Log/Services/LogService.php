@@ -10,18 +10,14 @@ declare(strict_types=1);
 
 namespace Core\Log\Services;
 
-trait LogService
+class LogService
 {
-    public function __construct()
-    {
-    }
-
-    public function info()
+    public static function info()
     {
 
     }
 
-    public function debug()
+    public static function debug()
     {
 
     }
