@@ -17,7 +17,6 @@ class PlaceholderService extends Service
 {
     public function __construct(
         PlaceholderFormatter $placeholderFormatter,
-    )
-    {
+    ) {
     }
 }

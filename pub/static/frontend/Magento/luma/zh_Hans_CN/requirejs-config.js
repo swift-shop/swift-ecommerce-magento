@@ -572,27 +572,6 @@ require.config(config);
 var config = {
     map: {
         '*': {
-            multiShipping: 'Magento_Multishipping/js/multi-shipping',
-            orderOverview: 'Magento_Multishipping/js/overview',
-            payment: 'Magento_Multishipping/js/payment',
-            billingLoader: 'Magento_Checkout/js/checkout-loader',
-            cartUpdate: 'Magento_Checkout/js/action/update-shopping-cart',
-            multiShippingBalance: 'Magento_Multishipping/js/multi-shipping-balance'
-        }
-    }
-};
-
-require.config(config);
-})();
-(function() {
-/**
- * Copyright © Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
- */
-
-var config = {
-    map: {
-        '*': {
             recentlyViewedProducts: 'Magento_Reports/js/recently-viewed'
         }
     }
@@ -741,41 +720,6 @@ require.config(config);
  */
 
 var config = {
-    map: {
-        '*': {
-            transparent: 'Magento_Payment/js/transparent',
-            'Magento_Payment/transparent': 'Magento_Payment/js/transparent'
-        }
-    }
-};
-
-require.config(config);
-})();
-(function() {
-/**
- * Copyright © Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
- */
-
-var config = {
-    map: {
-        '*': {
-            orderReview: 'Magento_Paypal/js/order-review',
-            'Magento_Paypal/order-review': 'Magento_Paypal/js/order-review',
-            paypalCheckout: 'Magento_Paypal/js/paypal-checkout'
-        }
-    }
-};
-
-require.config(config);
-})();
-(function() {
-/**
- * Copyright © Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
- */
-
-var config = {
     config: {
         mixins: {
             'Magento_Customer/js/customer-data': {
@@ -887,25 +831,6 @@ require.config(config);
 var config = {
     config: {
         mixins: {
-            'Magento_Paypal/js/view/payment/method-renderer/payflowpro-method': {
-                'Magento_ReCaptchaPaypal/js/payflowpro-method-mixin': true
-            }
-        }
-    }
-};
-
-require.config(config);
-})();
-(function() {
-/**
- * Copyright © Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
- */
-
-// eslint-disable-next-line no-unused-vars
-var config = {
-    config: {
-        mixins: {
             'jquery': {
                 'Magento_ReCaptchaWebapiUi/js/jquery-mixin': true
             }
@@ -982,30 +907,6 @@ require.config(config);
  */
 
 var config = {
-    config: {
-        mixins: {
-            'Magento_Checkout/js/view/payment/list': {
-                'Magento_PaypalCaptcha/js/view/payment/list-mixin': true
-            },
-            'Magento_Paypal/js/view/payment/method-renderer/payflowpro-method': {
-                'Magento_PaypalCaptcha/js/view/payment/method-renderer/payflowpro-method-mixin': true
-            },
-            'Magento_Captcha/js/view/checkout/defaultCaptcha': {
-                'Magento_PaypalCaptcha/js/view/checkout/defaultCaptcha-mixin': true
-            }
-        }
-    }
-};
-
-require.config(config);
-})();
-(function() {
-/**
- * Copyright © Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
- */
-
-var config = {
     map: {
         '*': {
             'taxToggle': 'Magento_Weee/js/tax-toggle',
@@ -1030,59 +931,6 @@ var config = {
             wishlistSearch: 'Magento_Wishlist/js/search'
         }
     }
-};
-
-require.config(config);
-})();
-(function() {
-/**
- * Config to pull in all the relevant Braintree JS SDKs
- * @type {{paths: {braintreePayPalInContextCheckout: string, braintreePayPalCheckout: string, braintreeVenmo: string, braintreeHostedFields: string, braintreeDataCollector: string, braintreeThreeDSecure: string, braintreeGooglePay: string, braintreeApplePay: string, braintreeAch: string, braintreeLpm: string, googlePayLibrary: string}, map: {"*": {braintree: string}}}}
- */
-var config = {
-    map: {
-        '*': {
-            braintree: 'https://js.braintreegateway.com/web/3.94.0/js/client.min.js',
-        }
-    },
-
-    paths: {
-        "braintreePayPalCheckout": "https://js.braintreegateway.com/web/3.94.0/js/paypal-checkout.min",
-        "braintreeHostedFields": "https://js.braintreegateway.com/web/3.94.0/js/hosted-fields.min",
-        "braintreeDataCollector": "https://js.braintreegateway.com/web/3.94.0/js/data-collector.min",
-        "braintreeThreeDSecure": "https://js.braintreegateway.com/web/3.94.0/js/three-d-secure.min",
-        "braintreeApplePay": 'https://js.braintreegateway.com/web/3.94.0/js/apple-pay.min',
-        "braintreeGooglePay": 'https://js.braintreegateway.com/web/3.94.0/js/google-payment.min',
-        "braintreeVenmo": 'https://js.braintreegateway.com/web/3.94.0/js/venmo.min',
-        "braintreeAch": "https://js.braintreegateway.com/web/3.94.0/js/us-bank-account.min",
-        "braintreeLpm": "https://js.braintreegateway.com/web/3.94.0/js/local-payment.min",
-        "googlePayLibrary": "https://pay.google.com/gp/p/js/pay",
-        "braintreePayPalInContextCheckout": "https://www.paypalobjects.com/api/checkout"
-    }
-};
-
-require.config(config);
-})();
-(function() {
-var config = {
-    config: {
-        mixins: {
-            'Magento_Checkout/js/model/step-navigator': {
-                'PayPal_Braintree/js/model/step-navigator-mixin': true
-            },
-            'Magento_Checkout/js/model/place-order': {
-                'PayPal_Braintree/js/model/place-order-mixin': true
-            },
-            'Magento_ReCaptchaWebapiUi/js/webapiReCaptchaRegistry': {
-                'PayPal_Braintree/js/reCaptcha/webapiReCaptchaRegistry-mixin': true
-            }
-        }
-    },
-    map: {
-        '*': {
-            braintreeCheckoutPayPalAdapter: 'PayPal_Braintree/js/view/payment/adapter'
-        }
-    },
 };
 
 require.config(config);
