@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route url="/V1/cms/get-list" method="GET">
+        <service class="Swift\Content\Api\GetCmsListInterface" method="execute"/>
+        <resources>
+            <resource ref="Swift_Content::management"/>
+        </resources>
+    </route>
+    <route url="/V1/cms/save" method="POST">
+        <service class="Swift\Content\Api\SaveCmsInterface" method="execute"/>
+        <resources>
+            <resource ref="Swift_Content::management"/>
+        </resources>
+    </route>
+    <route url="/V1/cms/:entityId" method="DELETE">
+        <service class="Swift\Content\Api\DeleteCmsByIdInterface" method="execute"/>
+        <resources>
+            <resource ref="Swift_Content::management"/>
+        </resources>
+    </route>
+</routes>

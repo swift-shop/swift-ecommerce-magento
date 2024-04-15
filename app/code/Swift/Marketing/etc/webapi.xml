@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route url="/V1/promotion/get-list" method="GET">
+        <service class="Swift\Marketing\Api\GetPromotionListInterface" method="execute"/>
+        <resources>
+            <resource ref="Swift_Marketing::management"/>
+        </resources>
+    </route>
+    <route url="/V1/promotion/save" method="POST">
+        <service class="Swift\Marketing\Api\SavePromotionInterface" method="execute"/>
+        <resources>
+            <resource ref="Swift_Marketing::management"/>
+        </resources>
+    </route>
+    <route url="/V1/promotion/:entityId" method="DELETE">
+        <service class="Swift\Marketing\Api\DeletePromotionByIdInterface" method="execute"/>
+        <resources>
+            <resource ref="Swift_Marketing::management"/>
+        </resources>
+    </route>
+    <route url="/V1/communication/get-list" method="GET">
+        <service class="Swift\Marketing\Api\GetCommunicationListInterface" method="execute"/>
+        <resources>
+            <resource ref="Swift_Marketing::management"/>
+        </resources>
+    </route>
+    <route url="/V1/communication/save" method="POST">
+        <service class="Swift\Marketing\Api\SaveCommunicationInterface" method="execute"/>
+        <resources>
+            <resource ref="Swift_Marketing::management"/>
+        </resources>
+    </route>
+    <route url="/V1/communication/:entityId" method="DELETE">
+        <service class="Swift\Marketing\Api\DeleteCommunicationByIdInterface" method="execute"/>
+        <resources>
+            <resource ref="Swift_Marketing::management"/>
+        </resources>
+    </route>
+</routes>

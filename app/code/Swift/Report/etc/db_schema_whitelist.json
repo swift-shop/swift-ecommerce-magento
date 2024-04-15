@@ -1,0 +1,13 @@
+{
+  "customer": {
+    "column": {
+      "customer_id": true
+    },
+    "index": {
+      "CUSTOMER_CUSTOMER_ID": true
+    },
+    "constraint": {
+      "PRIMARY": true
+    }
+  }
+}

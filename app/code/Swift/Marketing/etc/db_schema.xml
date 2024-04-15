@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="communication" resource="default" engine="innodb" comment="Communication">
+        <column xsi:type="int" name="communication_id" padding="10" unsigned="true" nullable="false" identity="true"
+                comment="Communication Id Column"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="communication_id"/>
+        </constraint>
+        <index referenceId="COMMUNICATION_COMMUNICATION_ID" indexType="btree">
+            <column name="communication_id"/>
+        </index>
+    </table>
+    <table name="promotion" resource="default" engine="innodb" comment="Promotion">
+        <column xsi:type="int" name="promotion_id" padding="10" unsigned="true" nullable="false" identity="true"
+                comment="Promotion Id Column"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="promotion_id"/>
+        </constraint>
+        <index referenceId="PROMOTION_PROMOTION_ID" indexType="btree">
+            <column name="promotion_id"/>
+        </index>
+    </table>
+</schema>

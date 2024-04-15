@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Swift_Payment::management" sortOrder="100" title="Security Management" module="Swift_Payment"
+             parent="Catalog_Product::management" resource="Swift_Payment::management" translate="title"
+             action="security/security/index"/>
+    </menu>
+</config>

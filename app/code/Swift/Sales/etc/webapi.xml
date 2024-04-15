@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route url="/V1/order/get-list" method="GET">
+        <service class="Swift\Sales\Api\GetOrderListInterface" method="execute"/>
+        <resources>
+            <resource ref="Swift_Sales::management"/>
+        </resources>
+    </route>
+    <route url="/V1/order/save" method="POST">
+        <service class="Swift\Sales\Api\SaveOrderInterface" method="execute"/>
+        <resources>
+            <resource ref="Swift_Sales::management"/>
+        </resources>
+    </route>
+    <route url="/V1/order/:entityId" method="DELETE">
+        <service class="Swift\Sales\Api\DeleteOrderByIdInterface" method="execute"/>
+        <resources>
+            <resource ref="Swift_Sales::management"/>
+        </resources>
+    </route>
+</routes>

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Swift_Marketing::management" sortOrder="100" title="Promotion Management" module="Swift_Marketing"
+             parent="Catalog_Product::management" resource="Swift_Marketing::management" translate="title"
+             action="promotion/promotion/index"/>
+    </menu>
+</config>

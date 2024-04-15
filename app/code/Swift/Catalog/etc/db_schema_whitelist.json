@@ -1,0 +1,35 @@
+{
+  "category": {
+    "column": {
+      "category_id": true
+    },
+    "index": {
+      "CATEGORY_CATEGORY_ID": true
+    },
+    "constraint": {
+      "PRIMARY": true
+    }
+  },
+  "product": {
+    "column": {
+      "product_id": true
+    },
+    "index": {
+      "PRODUCT_PRODUCT_ID": true
+    },
+    "constraint": {
+      "PRIMARY": true
+    }
+  },
+  "stock": {
+    "column": {
+      "stock_id": true
+    },
+    "index": {
+      "STOCK_STOCK_ID": true
+    },
+    "constraint": {
+      "PRIMARY": true
+    }
+  }
+}

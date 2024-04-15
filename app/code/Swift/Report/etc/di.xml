@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Swift\Report\Api\GetCustomerListInterface" type="Swift\Report\Query\Customer\GetListQuery"/>
+    <preference for="Swift\Report\Api\SaveCustomerInterface" type="Swift\Report\Command\Customer\SaveCommand"/>
+    <preference for="Swift\Report\Api\DeleteCustomerByIdInterface"
+                type="Swift\Report\Command\Customer\DeleteByIdCommand"/>
+    <preference for="Swift\Report\Api\Data\CustomerSearchResultsInterface"
+                type="Swift\Report\Model\CustomerSearchResults"/>
+</config>

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Swift\Content\Api\GetCmsListInterface" type="Swift\Content\Query\Cms\GetListQuery"/>
+    <preference for="Swift\Content\Api\SaveCmsInterface" type="Swift\Content\Command\Cms\SaveCommand"/>
+    <preference for="Swift\Content\Api\DeleteCmsByIdInterface" type="Swift\Content\Command\Cms\DeleteByIdCommand"/>
+    <preference for="Swift\Content\Api\Data\CmsSearchResultsInterface" type="Swift\Content\Model\CmsSearchResults"/>
+</config>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="cms" resource="default" engine="innodb" comment="Cms">
+        <column xsi:type="int" name="cms_id" padding="10" unsigned="true" nullable="false" identity="true"
+                comment="Cms Id Column"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="cms_id"/>
+        </constraint>
+        <index referenceId="CMS_CMS_ID" indexType="btree">
+            <column name="cms_id"/>
+        </index>
+    </table>
+</schema>

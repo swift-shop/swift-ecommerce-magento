@@ -1,0 +1,13 @@
+{
+  "cms": {
+    "column": {
+      "cms_id": true
+    },
+    "index": {
+      "CMS_CMS_ID": true
+    },
+    "constraint": {
+      "PRIMARY": true
+    }
+  }
+}

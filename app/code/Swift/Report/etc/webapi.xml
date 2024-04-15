@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route url="/V1/customer/get-list" method="GET">
+        <service class="Swift\Report\Api\GetCustomerListInterface" method="execute"/>
+        <resources>
+            <resource ref="Swift_Report::management"/>
+        </resources>
+    </route>
+    <route url="/V1/customer/save" method="POST">
+        <service class="Swift\Report\Api\SaveCustomerInterface" method="execute"/>
+        <resources>
+            <resource ref="Swift_Report::management"/>
+        </resources>
+    </route>
+    <route url="/V1/customer/:entityId" method="DELETE">
+        <service class="Swift\Report\Api\DeleteCustomerByIdInterface" method="execute"/>
+        <resources>
+            <resource ref="Swift_Report::management"/>
+        </resources>
+    </route>
+</routes>

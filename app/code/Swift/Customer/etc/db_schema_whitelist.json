@@ -1,0 +1,13 @@
+{
+  "address": {
+    "column": {
+      "address_id": true
+    },
+    "index": {
+      "ADDRESS_ADDRESS_ID": true
+    },
+    "constraint": {
+      "PRIMARY": true
+    }
+  }
+}

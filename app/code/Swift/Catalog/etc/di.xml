@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Swift\Catalog\Api\GetCategoryListInterface" type="Swift\Catalog\Query\Category\GetListQuery"/>
+    <preference for="Swift\Catalog\Api\SaveCategoryInterface" type="Swift\Catalog\Command\Category\SaveCommand"/>
+    <preference for="Swift\Catalog\Api\DeleteCategoryByIdInterface"
+                type="Swift\Catalog\Command\Category\DeleteByIdCommand"/>
+    <preference for="Swift\Catalog\Api\Data\CategorySearchResultsInterface"
+                type="Swift\Catalog\Model\CategorySearchResults"/>
+    <preference for="Swift\Catalog\Api\GetProductListInterface" type="Swift\Catalog\Query\Product\GetListQuery"/>
+    <preference for="Swift\Catalog\Api\SaveProductInterface" type="Swift\Catalog\Command\Product\SaveCommand"/>
+    <preference for="Swift\Catalog\Api\DeleteProductByIdInterface"
+                type="Swift\Catalog\Command\Product\DeleteByIdCommand"/>
+    <preference for="Swift\Catalog\Api\Data\ProductSearchResultsInterface"
+                type="Swift\Catalog\Model\ProductSearchResults"/>
+    <preference for="Swift\Catalog\Api\GetStockListInterface" type="Swift\Catalog\Query\Stock\GetListQuery"/>
+    <preference for="Swift\Catalog\Api\SaveStockInterface" type="Swift\Catalog\Command\Stock\SaveCommand"/>
+    <preference for="Swift\Catalog\Api\DeleteStockByIdInterface" type="Swift\Catalog\Command\Stock\DeleteByIdCommand"/>
+    <preference for="Swift\Catalog\Api\Data\StockSearchResultsInterface" type="Swift\Catalog\Model\StockSearchResults"/>
+</config>

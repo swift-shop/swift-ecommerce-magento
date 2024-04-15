@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Swift\Payment\Api\GetSecurityListInterface" type="Swift\Payment\Query\Security\GetListQuery"/>
+    <preference for="Swift\Payment\Api\SaveSecurityInterface" type="Swift\Payment\Command\Security\SaveCommand"/>
+    <preference for="Swift\Payment\Api\DeleteSecurityByIdInterface"
+                type="Swift\Payment\Command\Security\DeleteByIdCommand"/>
+    <preference for="Swift\Payment\Api\Data\SecuritySearchResultsInterface"
+                type="Swift\Payment\Model\SecuritySearchResults"/>
+</config>

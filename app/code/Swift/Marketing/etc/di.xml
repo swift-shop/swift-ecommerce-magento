@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Swift\Marketing\Api\GetPromotionListInterface"
+                type="Swift\Marketing\Query\Promotion\GetListQuery"/>
+    <preference for="Swift\Marketing\Api\SavePromotionInterface" type="Swift\Marketing\Command\Promotion\SaveCommand"/>
+    <preference for="Swift\Marketing\Api\DeletePromotionByIdInterface"
+                type="Swift\Marketing\Command\Promotion\DeleteByIdCommand"/>
+    <preference for="Swift\Marketing\Api\Data\PromotionSearchResultsInterface"
+                type="Swift\Marketing\Model\PromotionSearchResults"/>
+    <preference for="Swift\Marketing\Api\GetCommunicationListInterface"
+                type="Swift\Marketing\Query\Communication\GetListQuery"/>
+    <preference for="Swift\Marketing\Api\SaveCommunicationInterface"
+                type="Swift\Marketing\Command\Communication\SaveCommand"/>
+    <preference for="Swift\Marketing\Api\DeleteCommunicationByIdInterface"
+                type="Swift\Marketing\Command\Communication\DeleteByIdCommand"/>
+    <preference for="Swift\Marketing\Api\Data\CommunicationSearchResultsInterface"
+                type="Swift\Marketing\Model\CommunicationSearchResults"/>
+</config>

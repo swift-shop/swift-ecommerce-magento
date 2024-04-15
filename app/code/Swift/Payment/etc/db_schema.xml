@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="security" resource="default" engine="innodb" comment="Security">
+        <column xsi:type="int" name="security_id" padding="10" unsigned="true" nullable="false" identity="true"
+                comment="Security Id Column"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="security_id"/>
+        </constraint>
+        <index referenceId="SECURITY_SECURITY_ID" indexType="btree">
+            <column name="security_id"/>
+        </index>
+    </table>
+</schema>

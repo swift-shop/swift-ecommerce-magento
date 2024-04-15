@@ -1,0 +1,13 @@
+{
+  "order": {
+    "column": {
+      "order_id": true
+    },
+    "index": {
+      "ORDER_ORDER_ID": true
+    },
+    "constraint": {
+      "PRIMARY": true
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "security": {
+    "column": {
+      "security_id": true
+    },
+    "index": {
+      "SECURITY_SECURITY_ID": true
+    },
+    "constraint": {
+      "PRIMARY": true
+    }
+  }
+}

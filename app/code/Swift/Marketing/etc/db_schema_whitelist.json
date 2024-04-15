@@ -1,0 +1,24 @@
+{
+  "promotion": {
+    "column": {
+      "promotion_id": true
+    },
+    "index": {
+      "PROMOTION_PROMOTION_ID": true
+    },
+    "constraint": {
+      "PRIMARY": true
+    }
+  },
+  "communication": {
+    "column": {
+      "communication_id": true
+    },
+    "index": {
+      "COMMUNICATION_COMMUNICATION_ID": true
+    },
+    "constraint": {
+      "PRIMARY": true
+    }
+  }
+}
