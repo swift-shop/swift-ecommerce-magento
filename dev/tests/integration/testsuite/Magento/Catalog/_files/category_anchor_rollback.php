@@ -5,14 +5,14 @@
  */
 declare(strict_types=1);
 
-use Magento\Catalog\Api\Data\ProductSearchResultsInterface;
-use Magento\Catalog\Model\CategoryRepository;
 use Magento\Catalog\Api\Data\CategoryInterface;
+use Magento\Catalog\Api\Data\ProductInterface;
+use Magento\Catalog\Api\ProductRepositoryInterface;
+use Magento\Catalog\Model\CategoryRepository;
+use Magento\Framework\Api\SearchCriteriaBuilder;
 use Magento\Framework\Registry;
 use Magento\TestFramework\Helper\Bootstrap;
-use Magento\Catalog\Api\ProductRepositoryInterface;
-use Magento\Catalog\Api\Data\ProductInterface;
-use Magento\Framework\Api\SearchCriteriaBuilder;
+use Magento\Catalog\Api\Data\ProductSearchResultsInterface;
 
 $objectManager = Bootstrap::getObjectManager();
 

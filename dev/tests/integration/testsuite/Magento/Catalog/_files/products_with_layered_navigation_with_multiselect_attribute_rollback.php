@@ -5,10 +5,10 @@
  */
 
 use Magento\Catalog\Api\Data\ProductInterface;
-use Magento\Catalog\Api\Data\ProductSearchResultsInterface;
 use Magento\Catalog\Api\ProductRepositoryInterface;
 use Magento\Framework\Api\SearchCriteriaBuilder;
 use Magento\TestFramework\Workaround\Override\Fixture\Resolver;
+use Magento\Catalog\Api\Data\ProductSearchResultsInterface;
 
 Resolver::getInstance()->requireDataFixture('Magento/Catalog/_files/multiselect_attribute_rollback.php');
 

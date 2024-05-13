@@ -4,12 +4,12 @@
  * See COPYING.txt for license details.
  */
 
-use Magento\Catalog\Api\ProductRepositoryInterface;
-use Magento\Framework\Indexer\IndexerRegistry;
 use Magento\Catalog\Api\Data\ProductInterface;
-use Magento\Catalog\Api\Data\ProductSearchResultsInterface;
+use Magento\Catalog\Api\ProductRepositoryInterface;
 use Magento\Framework\Api\SearchCriteriaBuilder;
+use Magento\Framework\Indexer\IndexerRegistry;
 use Magento\TestFramework\Workaround\Override\Fixture\Resolver;
+use Magento\Catalog\Api\Data\ProductSearchResultsInterface;
 
 Resolver::getInstance()->requireDataFixture(
     'Magento/Catalog/_files/multiselect_attribute_with_source_model_rollback.php'

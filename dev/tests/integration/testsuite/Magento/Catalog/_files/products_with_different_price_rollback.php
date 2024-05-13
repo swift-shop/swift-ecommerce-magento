@@ -5,12 +5,12 @@
  */
 declare(strict_types=1);
 
-use Magento\Catalog\Api\Data\ProductSearchResultsInterface;
+use Magento\Catalog\Api\Data\ProductInterface;
 use Magento\Catalog\Api\ProductRepositoryInterface;
+use Magento\Framework\Api\SearchCriteriaBuilder;
 use Magento\Framework\Registry;
 use Magento\TestFramework\Helper\Bootstrap;
-use Magento\Catalog\Api\Data\ProductInterface;
-use Magento\Framework\Api\SearchCriteriaBuilder;
+use Magento\Catalog\Api\Data\ProductSearchResultsInterface;
 
 /**
  * Remove products with different price

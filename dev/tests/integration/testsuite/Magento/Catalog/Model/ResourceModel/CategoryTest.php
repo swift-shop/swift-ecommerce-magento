@@ -47,7 +47,7 @@ class CategoryTest extends TestCase
     /** @var CategoryRepositoryInterface */
     private $categoryRepository;
 
-    /** @var CategoryResource */
+    /** @var \Magento\Catalog\Model\ResourceModel\CategoryResource */
     private $categoryResource;
 
     /** @var StoreManagerInterface */
@@ -63,7 +63,7 @@ class CategoryTest extends TestCase
     private $mediaDirectory;
 
     /**
-     * @var ProductResource
+     * @var \Magento\Catalog\Model\ResourceModel\ProductResource
      */
     private $productResource;
 
