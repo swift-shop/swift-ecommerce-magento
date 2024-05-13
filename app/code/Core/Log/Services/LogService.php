@@ -17,7 +17,7 @@ class LogService
 
     }
 
-    public static function debug()
+    public static function debug(): void
     {
 
     }
